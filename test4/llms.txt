@@ -1,0 +1,20 @@
+# Phoenix (العنقاء)
+
+> Phoenix is a bilingual bookstore and gift shop serving customers in Jordan. The catalog includes toys, stationery, gifts, school projects and crafts, sewing tools, office supplies, and sports awards. Prices are shown in Jordanian dinars (JOD).
+
+## Store pages
+- Homepage: /
+- Browse categories: /#shop
+- About and contact: /#about
+- Cart: /#cart
+
+## Categories
+- Toys: /#category/toys
+- Stationery: /#category/stationery
+- Gifts: /#category/gifts
+- School projects and crafts: /#category/school-crafts
+- Sewing tools: /#category/sewing
+- Office supplies: /#category/office
+- Sports awards and trophies: /#category/awards
+
+The storefront is a static demonstration. Product availability, delivery terms, contact information, and payment processing must be confirmed with the store before ordering.

@@ -1,0 +1,12 @@
+{
+  "name": "Phoenix | العنقاء",
+  "short_name": "Phoenix",
+  "description": "Books, gifts and creative supplies in Jordan",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF3EE",
+  "theme_color": "#e60046",
+  "icons": [{"src":"/logo.jpg","sizes":"512x512","type":"image/jpeg","purpose":"any"}]
+}
