@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f4f0"><meta name="description" content="متجر العنقاء للكتب والقرطاسية والهدايا المختارة.">
+  <title>العنقاء — متجر الكتب والهدايا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="side-dock" aria-label="التنقل الرئيسي">
+      <a class="dock-brand" href="#home" aria-label="العنقاء"><span>ف</span></a>
+      <div class="dock-rule"></div>
+      <button class="dock-item active" data-target="home" aria-label="الرئيسية" title="الرئيسية"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg><span>الرئيسية</span></button>
+      <button class="dock-item" data-action="search" aria-label="بحث" title="بحث"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><span>بحث</span></button>
+      <button class="dock-item" data-action="favorites" aria-label="المفضلة" title="المفضلة"><svg viewBox="0 0 24 24"><path d="M20.8 8.8c0 5.4-8.8 11-8.8 11s-8.8-5.6-8.8-11A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.7Z"/></svg><span>المفضلة</span><i id="wish-count">0</i></button>
+      <button class="dock-item" data-action="cart" aria-label="السلة" title="السلة"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.5L22 8H6"/><circle cx="10" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>السلة</span><i id="cart-count">0</i></button>
+      <div class="dock-spacer"></div>
+      <button class="dock-item profile-dock" data-action="profile" aria-label="حسابي" title="حسابي"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>حسابي</span></button>
+    </aside>
+
+    <header class="topbar" id="home"><a class="wordmark" href="#home"><span class="wordmark-seal">ف</span><span><b>PHOENIX</b><small>العنقاء · مكتبة وهدايا</small></span></a><div class="top-meta"><span class="open-dot"></span> مختارات لكل قارئ <span class="meta-divider"></span> توصيل لجميع الأردن</div><button class="top-search" data-action="search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><span>ابحث عن كتاب، هدية...</span><kbd>⌘ K</kbd></button><button class="avatar" data-action="profile" aria-label="حسابي">ك</button></header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy"><span class="eyebrow"><i></i> مساحة للقراءة والاكتشاف</span><h1>كتابك القادم<br><em>ينتظرك هنا.</em></h1><p>روايات تبقى في الذاكرة، قرطاسية تلهمك، وهدايا تقول الكثير.</p><a href="#shop" class="hero-cta" data-target="shop">اكتشف المجموعة <span>←</span></a><div class="hero-proof"><div class="reader-stack"><b>ع</b><b>م</b><b>ر</b><b>+</b></div><span><strong>اختيارات محبوبة</strong><small>من قرّاء العنقاء</small></span></div></div>
+        <div class="hero-visual"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1300&q=85" alt="مكتبة دافئة مليئة بالكتب"><div class="hero-float"><span class="float-star">✳</span><span><b>لحظتك الهادئة</b><small>تبدأ بصفحة جديدة</small></span></div><div class="hero-index">01 <span>/</span> 04</div></div>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      </section>
+
+      <section class="category-section" aria-label="الأقسام"><div class="category-heading"><div><span class="eyebrow">تصفّح حسب مزاجك</span><h2>من أين نبدأ؟</h2></div><a href="#shop" data-target="shop">كل الأقسام <span>←</span></a></div><div class="category-cards">
+        <button class="category-card cat-books" data-category="كتب"><span class="category-icon">✳</span><b>كتب وروايات</b><small>حكايات لا تُنسى</small><i>↖</i></button>
+        <button class="category-card cat-kids" data-category="أطفال"><span class="category-icon">☼</span><b>عالم الأطفال</b><small>خيال، معرفة ومرح</small><i>↖</i></button>
+        <button class="category-card cat-stationery" data-category="قرطاسية"><span class="category-icon">✎</span><b>قرطاسية</b><small>أفكار تبدأ على ورق</small><i>↖</i></button>
+        <button class="category-card cat-gifts" data-category="هدايا"><span class="category-icon">✧</span><b>هدايا مميزة</b><small>لأن التفاصيل تهم</small><i>↖</i></button>
+      </div></section>
+
+      <section class="shop-section" id="shop"><div class="shop-heading"><div><span class="eyebrow">اختيرت لك بعناية</span><h2 id="shop-title">قطع مميزة هذا الأسبوع</h2></div><div class="shop-tools"><label class="search-field"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="search-input" type="search" placeholder="ابحث عن منتج..."></label><select id="sort-select" aria-label="ترتيب المنتجات"><option value="featured">الأكثر تميزاً</option><option value="price-up">السعر الأقل</option><option value="price-down">السعر الأعلى</option></select></div></div><div class="filter-row" id="filters"></div><div class="product-grid" id="products"></div><p class="no-results hidden" id="no-results">ما لقينا منتجات مطابقة. جرّب كلمة ثانية.</p><button class="load-more" id="load-more">اعرض المزيد <span>↓</span></button></section>
+
+      <section class="editorial"><div class="editorial-image"><img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=80" alt="كتب مختارة لمحبي القراءة" loading="lazy"></div><div class="editorial-copy"><span class="eyebrow">هدية من القلب</span><h2>للناس اللي<br>يحبّوا <em>الكتب.</em></h2><p>اختيارات صغيرة تصنع لحظات كبيرة. اكتشف هدايا القرّاء التي تجعل كل مناسبة أقرب.</p><button class="dark-button" data-category="هدايا">تصفّح الهدايا <span>←</span></button></div><span class="editorial-tag">THE GIFT EDIT · 2026</span></section>
+
+      <section class="newsletter"><div><span class="eyebrow">رسالة خفيفة، وإلهام كثير</span><h2>خلي الحكايات توصلك.</h2><p>إصدارات جديدة، ترشيحات قراءة وعروض العنقاء.</p></div><form id="newsletter-form"><input type="email" placeholder="بريدك الإلكتروني" aria-label="البريد الإلكتروني" required><button>اشترك <span>←</span></button></form></section>
+    </main>
+    <footer><span>© 2026 العنقاء · PHOENIX</span><span>صُنع بحب للقراءة في الأردن</span><a href="https://wa.me/962797459207" target="_blank" rel="noopener">تواصل معنا ↗</a></footer>
+  </div>
+
+  <div class="shade" id="shade"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="سلة التسوق"><div class="drawer-head"><div><span class="eyebrow">أغراضك المختارة</span><h2>سلة التسوق</h2></div><button class="close-button" data-close="cart" aria-label="إغلاق">×</button></div><div class="drawer-items" id="drawer-items"></div><div class="drawer-empty" id="drawer-empty">لسّه ما اخترت شي.<br><small>خذ جولة بين الكتب وأضف اللي يعجبك.</small></div><div class="drawer-bottom"><div><span>المجموع</span><b id="drawer-total">0.00 د.أ</b></div><button class="checkout-button" id="checkout-button">إتمام الطلب <span>←</span></button><small>التوصيل مجاني للطلبات فوق ٥٠ دينار</small></div></aside>
+  <div class="modal-wrap" id="profile-modal"><div class="modal"><button class="close-button" data-close="profile">×</button><span class="eyebrow">أهلاً في العنقاء</span><h2>بيانات التوصيل</h2><p>احفظ بياناتك لتسهيل طلبك القادم.</p><form id="profile-form"><label>الاسم<input id="customer-name" required></label><label>رقم الهاتف<input id="customer-phone" type="tel" inputmode="tel" required></label><label>العنوان<input id="customer-address" required></label><button class="checkout-button">حفظ البيانات</button></form></div></div>
+  <div class="modal-wrap" id="checkout-modal"><div class="modal checkout-modal"><button class="close-button" data-close="checkout">×</button><span class="eyebrow">خطوة أخيرة</span><h2>إتمام الطلب</h2><div id="checkout-summary"></div><form id="checkout-form"><label>الاسم<input id="checkout-name" required></label><label>الهاتف<input id="checkout-phone" type="tel" required></label><label>عنوان التوصيل<input id="checkout-address" required></label><button class="checkout-button">إرسال الطلب عبر واتساب <span>←</span></button></form></div></div>
+  <div class="toast" id="toast"></div>
+</body>
+</html>
