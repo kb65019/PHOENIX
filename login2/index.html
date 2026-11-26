@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7a0c10">
+  <meta name="description" content="متجر العنقاء للكتب والقرطاسية والهدايا في الأردن.">
+  <title>العنقاء | مكتبة وهدايا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">توصيل لجميع أنحاء الأردن · الدفع عند الاستلام</div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="العنقاء، الصفحة الرئيسية"><span class="brand-mark">ف</span><span><b>PHOENIX</b><small>العنقاء · مكتبة وهدايا</small></span></a>
+    <nav class="nav-links"><a href="#catalog">تسوّق</a><button data-view="orders">طلباتي</button><button data-view="profile">حسابي</button><button id="admin-nav" class="hidden" data-view="admin">الإدارة</button></nav>
+    <div class="header-actions"><button id="auth-nav" class="outline-button">دخول</button><button class="cart-nav" id="cart-nav">السلة <span id="cart-count">0</span></button><button class="menu-toggle" id="menu-toggle" aria-label="فتح القائمة">☰</button></div>
+  </header>
+  <main id="home">
+    <div id="store-content">
+    <section class="hero"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1600&q=85" alt="رفوف كتب في مكتبة"></div><div class="hero-copy"><span class="eyebrow">اختيارات العنقاء</span><h1>كل حكاية جميلة<br>تبدأ من هنا.</h1><p>كتب وقرطاسية وهدايا مختارة لك ولأحبابك.</p><a class="primary-button" href="#catalog">تسوّق الآن <span>←</span></a></div><div class="hero-stamp">✦ اكتشف كتابك القادم</div></section>
+    <section class="benefits" aria-label="مميزات المتجر"><div><span>✧</span><b>اختيارات لكل الأعمار</b></div><div><span>↗</span><b>توصيل في الأردن</b></div><div><span>♡</span><b>هدايا بمحبة</b></div></section>
+    <section class="catalog page-section" id="catalog"><div class="section-head"><div><span class="eyebrow">تصفّح مجموعتنا</span><h2>منتجات مختارة</h2></div><div class="catalog-tools"><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="ابحث عن كتاب أو منتج..."></label><label class="sort-box"><span>ترتيب:</span><select id="sort"><option value="popular">الأكثر رواجاً</option><option value="discount">أعلى خصم</option><option value="price-up">السعر: الأقل أولاً</option><option value="price-down">السعر: الأعلى أولاً</option></select></label></div></div><div id="categories" class="categories"></div><div id="products" class="product-grid" aria-live="polite"></div><p id="empty-products" class="empty hidden">لا توجد منتجات مطابقة.</p></section>
+    <section class="cart-section page-section" id="cart"><div class="section-head"><div><span class="eyebrow">جاهز للطلب؟</span><h2>سلة التسوق</h2></div></div><div id="cart-items"></div><div id="cart-empty" class="empty">أضف المنتجات التي أعجبتك للمتابعة.</div><div id="cart-summary" class="cart-summary hidden"><div><span>المجموع</span><b id="cart-total">0.00 د.أ</b></div><button class="primary-button full-button" id="checkout-button">إتمام الطلب ←</button></div></section>
+    </div>
+    <section id="auth-view" class="view panel hidden"><button class="back-button" data-view="store">← العودة للمتجر</button><span class="eyebrow">مرحباً بك في العنقاء</span><h2 id="auth-title">سجّل دخولك</h2><p class="subtle">احفظ عنوانك وتابع طلباتك بسهولة.</p><form id="auth-form" class="form-grid"><label id="name-field" class="hidden">الاسم الكامل<input id="auth-name" autocomplete="name"></label><label>البريد الإلكتروني<input id="auth-email" type="email" autocomplete="email" required></label><label>كلمة المرور<input id="auth-password" type="password" minlength="6" autocomplete="current-password" required></label><button id="auth-submit" class="primary-button full-button">تسجيل الدخول</button></form><button id="google-login" class="google-button"><span>G</span> المتابعة باستخدام Google</button><button class="apple-button" disabled title="يتطلب إعداد Apple Developer"> المتابعة باستخدام Apple · قريباً</button><p class="auth-switch"><span id="auth-switch-label">ليس لديك حساب؟</span> <button id="auth-switch">إنشاء حساب</button></p></section>
+    <section id="profile-view" class="view panel hidden"><button class="back-button" data-view="store">← المتجر</button><span class="eyebrow">حسابك</span><h2>بيانات التوصيل</h2><p class="subtle">تُحفظ بياناتك لتسهيل طلباتك القادمة.</p><form id="profile-form" class="form-grid"><label>الاسم الكامل<input id="profile-name" autocomplete="name" required></label><label>رقم الهاتف<input id="profile-phone" type="tel" inputmode="tel" autocomplete="tel" required></label><label class="span-two">عنوان التوصيل<input id="profile-address" autocomplete="street-address" required></label><button class="primary-button">حفظ البيانات</button></form></section>
+    <section id="checkout-view" class="view panel hidden"><button class="back-button" data-view="store">← العودة للسلة</button><span class="eyebrow">خطوة أخيرة</span><h2>إتمام الطلب</h2><div class="checkout-grid"><form id="checkout-form" class="form-grid"><label>الاسم الكامل<input id="checkout-name" autocomplete="name" required></label><label>رقم الهاتف<input id="checkout-phone" type="tel" inputmode="tel" autocomplete="tel" required></label><label class="span-two">عنوان التوصيل<input id="checkout-address" autocomplete="street-address" required></label><button id="place-order" class="primary-button full-button">تأكيد الطلب</button></form><aside class="summary-card"><h3>ملخص الطلب</h3><div id="checkout-lines"></div><div class="summary-total"><span>الإجمالي</span><b id="checkout-total"></b></div><p>سيتواصل معك فريقنا لتأكيد تفاصيل التوصيل.</p></aside></div></section>
+    <section id="orders-view" class="view panel hidden"><button class="back-button" data-view="store">← المتجر</button><span class="eyebrow">متابعة مشترياتك</span><h2>طلباتي</h2><div id="orders-list"></div><p id="orders-empty" class="empty">سجّل الدخول لعرض طلباتك.</p></section>
+    <section id="admin-view" class="view panel hidden"><button class="back-button" data-view="store">← المتجر</button><span class="eyebrow">إدارة المتجر</span><h2>لوحة الإدارة</h2><form id="product-form" class="form-grid admin-form"><h3 class="span-two" id="product-form-title">إضافة منتج</h3><input id="edit-id" type="hidden"><label>اسم المنتج<input id="product-name" required></label><label>القسم<input id="product-category" value="كتب" required></label><label>السعر بالدينار<input id="product-price" type="number" min="0" step="0.01" required></label><label>المخزون<input id="product-stock" type="number" min="0" step="1" required></label><label class="span-two">رابط الصورة<input id="product-image" type="url"></label><label class="span-two">الوصف<input id="product-description"></label><button id="product-save" class="primary-button">حفظ المنتج</button><button id="product-cancel" type="button" class="outline-button hidden">إلغاء التعديل</button></form><h3 class="admin-heading">المنتجات</h3><div id="admin-products"></div><h3 class="admin-heading">الطلبات الواردة</h3><div id="admin-orders"></div></section>
+  </main>
+  <footer><div class="brand"><span class="brand-mark">ف</span><span><b>PHOENIX · العنقاء</b><small>كتب، هدايا وقرطاسية مختارة</small></span></div><span>© 2026 العنقاء</span></footer>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <div id="loading" class="loading hidden"><span></span> جارٍ التحميل...</div>
+  <script defer src="https://www.gstatic.com/firebasejs/11.0.0/firebase-app-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/11.0.0/firebase-analytics-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/11.0.0/firebase-auth-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore-compat.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/11.0.0/firebase-functions-compat.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>
